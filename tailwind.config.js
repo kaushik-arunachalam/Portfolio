@@ -9,9 +9,9 @@ export default {
         'surface-2': '#16132A',  // hover state for panels
         line: '#231E3A',         // hairline borders / dividers
         text: {
-          DEFAULT: '#EDE9F6',    // off-white with a purple tint
-          muted: '#9A90B8',      // muted purple-grey
-          faint: '#5C5478',      // very faint for timestamps etc.
+          DEFAULT: '#F2EEFF',    // crisp near-white with a cool purple tint (~16:1 contrast)
+          muted: '#C9BEE8',      // soft lavender — readable secondary text (~7:1 contrast)
+          faint: '#8C82AA',      // visible purple-grey for timestamps/labels (~3.5:1 contrast)
         },
         accent: {
           DEFAULT: '#A855F7',    // violet-purple primary accent
