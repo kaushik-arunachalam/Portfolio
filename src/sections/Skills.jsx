@@ -16,7 +16,7 @@ export default function Skills() {
               {group.items.map((skill) => (
                 <li
                   key={skill}
-                  className="rounded border border-line px-3 py-1.5 font-mono text-xs text-text-muted"
+                  className="rounded border border-accent/20 bg-accent/5 px-3 py-1.5 font-mono text-xs text-text-muted transition-colors hover:border-accent/40 hover:text-accent"
                 >
                   {skill}
                 </li>

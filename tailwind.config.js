@@ -4,20 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0A0C10',        // page background
-        surface: '#12151B',    // panels / cards
-        'surface-2': '#171B22',// hover state for panels
-        line: '#22262E',       // hairline borders/dividers
+        ink: '#08070D',          // deep near-black page background
+        surface: '#100E1A',      // card / panel background
+        'surface-2': '#16132A',  // hover state for panels
+        line: '#231E3A',         // hairline borders / dividers
         text: {
-          DEFAULT: '#E9EBEF',
-          muted: '#8890A0',
-          faint: '#5B6270',
+          DEFAULT: '#EDE9F6',    // off-white with a purple tint
+          muted: '#9A90B8',      // muted purple-grey
+          faint: '#5C5478',      // very faint for timestamps etc.
         },
         accent: {
-          DEFAULT: '#5B8DEF',  // signal blue - primary accent
-          dim: '#3C5B99',
+          DEFAULT: '#A855F7',    // violet-purple primary accent
+          dim: '#7C3AED',        // darker purple for hover states
+          glow: '#C084FC',       // bright lilac for glow effects
         },
-        ember: '#E2A857',       // secondary accent, used sparingly
+        ember: '#E879F9',        // fuchsia — used sparingly as a secondary pop
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],
@@ -29,7 +30,13 @@ export default {
       },
       backgroundImage: {
         'grid-fade':
-          'linear-gradient(180deg, transparent 0%, rgba(10,12,16,0.9) 90%)',
+          'linear-gradient(180deg, transparent 0%, rgba(8,7,13,0.95) 90%)',
+        'purple-glow':
+          'radial-gradient(ellipse 70% 60% at 50% -10%, rgba(168,85,247,0.18) 0%, transparent 70%)',
+      },
+      boxShadow: {
+        'glow-purple': '0 0 40px -8px rgba(168,85,247,0.45)',
+        'glow-sm': '0 0 16px -4px rgba(168,85,247,0.3)',
       },
     },
   },

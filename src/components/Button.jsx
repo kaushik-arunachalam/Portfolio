@@ -6,12 +6,13 @@ export default function Button({
   ...props
 }) {
   const base =
-    'inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-colors duration-150'
+    'inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-medium transition-all duration-200'
 
   const variants = {
-    primary: 'bg-accent text-ink hover:bg-accent-dim',
+    primary:
+      'bg-accent text-ink hover:bg-accent-dim hover:shadow-glow-sm',
     ghost:
-      'border border-line text-text hover:border-accent/60 hover:text-accent',
+      'border border-line text-text hover:border-accent/70 hover:text-accent hover:bg-accent/5',
   }
 
   return (

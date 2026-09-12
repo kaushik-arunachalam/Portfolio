@@ -7,11 +7,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line/60 bg-ink/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-accent/10 bg-ink/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
         <a
           href="#top"
-          className="font-display text-sm font-semibold tracking-tight text-text"
+          className="font-display text-sm font-semibold tracking-tight bg-gradient-to-r from-accent-glow to-accent bg-clip-text text-transparent"
         >
           {profile.name}
         </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden border-t border-line/60 md:hidden"
+            className="overflow-hidden border-t border-accent/10 md:hidden"
           >
             {navLinks.map((link) => (
               <li key={link.href} className="border-b border-line/40">

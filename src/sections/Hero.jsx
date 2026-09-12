@@ -17,8 +17,17 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="flex min-h-screen flex-col justify-center px-6 pt-24 sm:px-8 lg:px-10"
+      className="relative flex min-h-screen flex-col justify-center px-6 pt-24 sm:px-8 lg:px-10 overflow-hidden"
     >
+      {/* Purple atmospheric glow rings */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+      >
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[120px]" />
+        <div className="absolute left-1/2 top-1/4 -translate-x-1/2 h-[300px] w-[300px] rounded-full bg-accent-dim/15 blur-[80px]" />
+      </div>
+
       <motion.div
         variants={container}
         initial="hidden"
@@ -31,9 +40,12 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="font-display text-4xl font-semibold leading-tight text-text sm:text-6xl"
+          className="font-display text-4xl font-semibold leading-tight sm:text-6xl"
         >
-          {profile.name}
+          {/* Gradient name */}
+          <span className="bg-gradient-to-r from-accent-glow via-accent to-accent-dim bg-clip-text text-transparent">
+            {profile.name}
+          </span>
         </motion.h1>
 
         <motion.p

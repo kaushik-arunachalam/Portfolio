@@ -2,7 +2,7 @@ import { ArrowUpRight, Github } from 'lucide-react'
 
 export default function ProjectCard({ title, description, tags, link, repo }) {
   return (
-    <div className="group rounded-lg border border-line bg-surface p-6 transition-colors duration-150 hover:border-accent/40">
+    <div className="group rounded-lg border border-line bg-surface p-6 transition-all duration-200 hover:border-accent/50 hover:shadow-glow-sm hover:bg-surface-2">
       <div className="flex items-start justify-between gap-4">
         <h3 className="font-display text-lg font-semibold text-text">
           {title}
@@ -14,7 +14,7 @@ export default function ProjectCard({ title, description, tags, link, repo }) {
               target="_blank"
               rel="noreferrer"
               aria-label={`${title} source code`}
-              className="hover:text-accent"
+              className="hover:text-accent transition-colors"
             >
               <Github size={18} />
             </a>
@@ -25,7 +25,7 @@ export default function ProjectCard({ title, description, tags, link, repo }) {
               target="_blank"
               rel="noreferrer"
               aria-label={`${title} live link`}
-              className="hover:text-accent"
+              className="hover:text-accent transition-colors"
             >
               <ArrowUpRight size={18} />
             </a>
@@ -42,7 +42,7 @@ export default function ProjectCard({ title, description, tags, link, repo }) {
           {tags.map((tag) => (
             <li
               key={tag}
-              className="rounded border border-line px-2 py-1 font-mono text-xs text-text-muted"
+              className="rounded border border-accent/20 bg-accent/5 px-2 py-1 font-mono text-xs text-text-muted"
             >
               {tag}
             </li>

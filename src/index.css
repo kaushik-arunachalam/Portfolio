@@ -7,6 +7,25 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    /* Subtle purple radial glow from the top of the page */
+    background-image: radial-gradient(
+      ellipse 80% 50% at 50% -5%,
+      rgba(168, 85, 247, 0.14) 0%,
+      transparent 65%
+    );
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #08070D; }
+  ::-webkit-scrollbar-thumb {
+    background: #3B1D6E;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: #A855F7; }
+
   ::selection {
     background-color: theme('colors.accent.DEFAULT');
     color: theme('colors.ink');
@@ -22,6 +41,7 @@
     letter-spacing: -0.01em;
   }
 }
+
 
 @layer components {
   /* Section wrapper: consistent rhythm without repeating classes everywhere */
