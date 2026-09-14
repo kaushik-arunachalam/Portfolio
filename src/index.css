@@ -8,10 +8,10 @@
   }
 
   body {
-    /* Subtle purple radial glow from the top of the page */
+    /* Subtle amber radial glow from the top of the page */
     background-image: radial-gradient(
       ellipse 80% 50% at 50% -5%,
-      rgba(168, 85, 247, 0.14) 0%,
+      rgba(227, 168, 87, 0.12) 0%,
       transparent 65%
     );
     background-attachment: fixed;
@@ -19,12 +19,12 @@
 
   /* Custom scrollbar */
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-track { background: #08070D; }
+  ::-webkit-scrollbar-track { background: #0A0E16; }
   ::-webkit-scrollbar-thumb {
-    background: #3B1D6E;
+    background: #3D2F1A;
     border-radius: 3px;
   }
-  ::-webkit-scrollbar-thumb:hover { background: #A855F7; }
+  ::-webkit-scrollbar-thumb:hover { background: #E3A857; }
 
   ::selection {
     background-color: theme('colors.accent.DEFAULT');

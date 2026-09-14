@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { profile } from '../data/profile'
 import Button from '../components/Button'
+
+const socialLinks = [
+  { label: 'GitHub', href: profile.socials.github, icon: Github },
+  { label: 'LinkedIn', href: profile.socials.linkedin, icon: Linkedin },
+  { label: 'Email', href: `mailto:${profile.email}`, icon: Mail },
+]
 
 const container = {
   hidden: {},
@@ -19,7 +25,7 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-screen flex-col justify-center px-6 pt-24 sm:px-8 lg:px-10 overflow-hidden"
     >
-      {/* Purple atmospheric glow rings */}
+      {/* Amber atmospheric glow rings */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
@@ -34,6 +40,19 @@ export default function Hero() {
         animate="show"
         className="mx-auto w-full max-w-5xl"
       >
+        <motion.div
+          variants={item}
+          className="mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-3 py-1"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+          </span>
+          <span className="font-mono text-xs text-text-muted">
+            Open to internships &amp; new opportunities
+          </span>
+        </motion.div>
+
         <motion.p variants={item} className="section-label mb-5">
           {profile.location}
         </motion.p>
@@ -59,13 +78,27 @@ export default function Hero() {
           {profile.tagline}
         </motion.p>
 
-        <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
+        <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
           <Button href="#projects" variant="primary">
             View projects
           </Button>
           <Button href="#contact" variant="ghost">
             Get in touch
           </Button>
+
+          <div className="ml-1 flex items-center gap-1">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                {...(href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}
+                aria-label={label}
+                className="rounded-md p-2 text-text-faint transition-colors hover:text-accent"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+          </div>
         </motion.div>
       </motion.div>
 
