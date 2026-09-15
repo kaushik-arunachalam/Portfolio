@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail, FileDown } from 'lucide-react'
 import { profile } from '../data/profile'
 import Button from '../components/Button'
 
@@ -85,6 +85,17 @@ export default function Hero() {
           <Button href="#contact" variant="ghost">
             Get in touch
           </Button>
+          {profile.socials.resume && (
+            <Button
+              href={profile.socials.resume}
+              target="_blank"
+              rel="noreferrer"
+              variant="ghost"
+            >
+              <FileDown size={16} />
+              Resume
+            </Button>
+          )}
 
           <div className="ml-1 flex items-center gap-1">
             {socialLinks.map(({ label, href, icon: Icon }) => (

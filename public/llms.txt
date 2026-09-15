@@ -1,0 +1,19 @@
+# Kaushik Arunachalam — Portfolio
+
+> Personal portfolio of Kaushik Arunachalam, a Computer Science student at Amrita Vishwa Vidyapeetham (Chennai, India), focused on data analytics and software development.
+
+This is a single-page site. All sections live on the same URL, addressable by anchor:
+
+- [About](/#about) — background and current focus
+- [Skills](/#skills) — languages, data & databases, data analytics, web development, soft skills
+- [Projects](/#projects) — selected projects (in progress)
+- [Experience](/#experience) — work history
+- [Education](/#education) — degrees and schools
+- [Certifications](/#certifications) — courses and credentials, grouped by skill area
+- [Contact](/#contact) — email, GitHub, LinkedIn
+
+## Contact
+
+- Email: kaushikarun.official@gmail.com
+- GitHub: https://github.com/kaushik-arunachalam
+- LinkedIn: https://www.linkedin.com/in/kaushik-arunachalam-4929b836a/

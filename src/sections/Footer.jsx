@@ -6,6 +6,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 text-sm text-text-faint sm:flex-row">
         <p>© {new Date().getFullYear()} {profile.name}</p>
         <p>Built with React, Vite & Tailwind CSS</p>
+        <a href="#top" className="hover:text-accent transition-colors">
+          Back to top
+        </a>
       </div>
     </footer>
   )

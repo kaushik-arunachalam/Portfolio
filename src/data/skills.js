@@ -22,6 +22,10 @@ export const skillGroups = [
       'Problem Solving',
       'Communication',
       'Decision Making',
+      'Adaptability',
+      'Collaboration',
+      'Leadership',
+      'Curiosity',
     ],
   },
 ]

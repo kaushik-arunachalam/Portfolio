@@ -8,10 +8,14 @@ export const profile = {
   tagline:
     'Turning messy datasets into clear, actionable insights — with a growing foundation in software engineering.',
   email: 'kaushikarun.official@gmail.com',
+  emails: {
+    official: 'kaushikarun.official@gmail.com',
+    personal: 'kaushikarunachalam@gmail.com',
+  },
   socials: {
     github: 'https://github.com/kaushik-arunachalam',
     linkedin: 'https://www.linkedin.com/in/kaushik-arunachalam-4929b836a/',
-    resume: '', // TODO: link to a hosted PDF resume once you upload one somewhere public
+    resume: '/ma-kaushik-resume.pdf',
   },
 }
 

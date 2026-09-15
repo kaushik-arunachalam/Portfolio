@@ -1,8 +1,26 @@
-import { ArrowUpRight, Github } from 'lucide-react'
+import { ArrowUpRight, Github, ScanSearch } from 'lucide-react'
 
-export default function ProjectCard({ title, description, tags, link, repo }) {
+export default function ProjectCard({
+  title,
+  description,
+  tags,
+  link,
+  repo,
+  onOpen,
+}) {
   return (
-    <div className="group rounded-lg border border-line bg-surface p-6 transition-all duration-200 hover:border-accent/50 hover:shadow-glow-sm hover:bg-surface-2">
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={onOpen}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onOpen?.()
+        }
+      }}
+      className="group cursor-pointer rounded-lg border border-line bg-surface p-6 transition-all duration-200 hover:border-accent/50 hover:shadow-glow-sm hover:bg-surface-2"
+    >
       <div className="flex items-start justify-between gap-4">
         <h3 className="font-display text-lg font-semibold text-text">
           {title}
@@ -13,6 +31,7 @@ export default function ProjectCard({ title, description, tags, link, repo }) {
               href={repo}
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
               aria-label={`${title} source code`}
               className="hover:text-accent transition-colors"
             >
@@ -24,6 +43,7 @@ export default function ProjectCard({ title, description, tags, link, repo }) {
               href={link}
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
               aria-label={`${title} live link`}
               className="hover:text-accent transition-colors"
             >
@@ -49,6 +69,11 @@ export default function ProjectCard({ title, description, tags, link, repo }) {
           ))}
         </ul>
       )}
+
+      <p className="mt-5 inline-flex items-center gap-2 text-sm text-text-faint transition-colors group-hover:text-accent">
+        <ScanSearch size={14} />
+        View details
+      </p>
     </div>
   )
 }

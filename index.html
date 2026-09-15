@@ -3,17 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      TODO before deploying: replace every occurrence of
+      https://kaushik-arunachalam-portfolio.vercel.app below (canonical,
+      og:url, twitter, JSON-LD "url") with the real production domain.
+      Same placeholder is used in public/sitemap.xml and public/robots.txt.
+    -->
+
     <title>Kaushik Arunachalam — Portfolio</title>
     <meta
       name="description"
-      content="Kaushik Arunachalam — Computer Science & Cybersecurity student. Projects, skills, and experience."
+      content="Portfolio of Kaushik Arunachalam, a Computer Science student in Chennai focused on data analytics and software development. Projects, skills, experience, and certifications."
     />
+    <meta name="author" content="Kaushik Arunachalam" />
+    <link rel="canonical" href="https://kaushik-arunachalam-portfolio.vercel.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Kaushik Arunachalam — Portfolio" />
+    <meta property="og:title" content="Kaushik Arunachalam — Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Kaushik Arunachalam, a Computer Science student in Chennai focused on data analytics and software development."
+    />
+    <meta property="og:url" content="https://kaushik-arunachalam-portfolio.vercel.app/" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Kaushik Arunachalam — Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Kaushik Arunachalam, a Computer Science student in Chennai focused on data analytics and software development."
+    />
+
+    <meta name="theme-color" content="#0A0E16" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kaushik Arunachalam",
+        "url": "https://kaushik-arunachalam-portfolio.vercel.app/",
+        "jobTitle": "Computer Science Student",
+        "description": "Computer Science student focused on data analytics and software development.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chennai",
+          "addressCountry": "IN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Amrita Vishwa Vidyapeetham"
+        },
+        "email": "mailto:kaushikarun.official@gmail.com",
+        "sameAs": [
+          "https://github.com/kaushik-arunachalam",
+          "https://www.linkedin.com/in/kaushik-arunachalam-4929b836a/"
+        ]
+      }
+    </script>
   </head>
   <body class="bg-ink text-text font-body antialiased">
     <div id="root"></div>
